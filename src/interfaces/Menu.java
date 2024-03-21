@@ -41,7 +41,7 @@ public class Menu {
                 break;
             case "4":
                 //find all words that end with
-                System.out.println("Find all words starting with...");
+                System.out.println("Find all words ending with...");
                 PrintWords.printAllWordsInList(WordFinder.findWordEndingWith(GetInput.userInput()));
                 break;
             case "5":
