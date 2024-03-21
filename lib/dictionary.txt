@@ -1,4 +1,7 @@
 word | definition | part of speech | example usage
 test | take measures to check the quality, performance, or reliability of (something), especially before putting it into widespread use or practice. | verb | "this range has not been tested on animals"
 test | a procedure intended to establish the quality, performance, or reliability of something, especially before it is taken into widespread use. | noun | "no sparking was visible during the tests"
+programming | The process of writing computer programs | noun | "Programming is a crucial skill for software developers."
+analyze | To examine something methodically and in detail | verb | "The scientist analyzed the data to draw conclusions."
+resilient | Able to withstand or recover quickly from difficult conditions | adjective | "The city's infrastructure proved to be resilient during the earthquake."
 shrek | An ogre with layers, like an onion. | noun | "GET OUT OF MAH SWAMP!"
