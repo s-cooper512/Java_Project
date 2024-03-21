@@ -20,7 +20,8 @@ public class Menu {
                 7. Delete a word
                 8. History
                 9. Creator
-                10. Exit
+                10. Save & Exit
+                11. Exit without saving
                 =====================================================================""");
         switch (GetInput.userInput()) {
             case "1":
@@ -54,7 +55,7 @@ public class Menu {
                 break;
             case "7":
                 //delete word
-                System.out.println("What word would you like to remove (this will remove all instances of that word)?");
+                System.out.println("What word would you like to remove? (this will remove all instances of that word)");
                 WordInitializer.removeFromWordList(GetInput.userInput());
                 break;
             case "8":
@@ -65,6 +66,10 @@ public class Menu {
                 Creator.readContent();
                 break;
             case "10":
+                //Save & Exit
+                System.out.println("Saving updated dictionary...");
+                WordInitializer.overwriteSavedDictionary();
+            case "11":
                 //Exit
                 System.out.println("Exiting...");
                 System.exit(0);

@@ -1,24 +1,20 @@
 package domain;
 
-import Util.GetInput;
-
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class WordInitializer {
 
 
     public static List<Word> activeDictionary = new ArrayList<>();
+    static String txtPath = "./lib/dictionary.txt";
     public static void initWordList () {
-        String txtPath = "./lib/dictionary.txt";
-
         if (Files.exists(Path.of(txtPath))) {
             File dictionary = new File(txtPath);
             try (Scanner checkLines = new Scanner(dictionary)) {
@@ -45,5 +41,23 @@ public class WordInitializer {
 
     public static void overwriteSavedDictionary() {
         //Add code to call the word writer for each item in activeDictionary and ensure that append is off
+        if (Files.exists(Path.of(txtPath))) {
+            File dictionary = new File(txtPath);
+            try (FileWriter writer = new FileWriter(txtPath)) {
+                writer.write("");
+                activeDictionary.forEach(word -> {
+                    try {
+                        writer.append(word.getWordName() + " | " + word.getWordDefinition() + " | " + word.getWordType() + " | " + word.getWordUsage() + "\n");
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+            } catch (IOException e) {
+                throw new RuntimeException();
+            }
+        } else {
+            System.out.println("Failed to find " + txtPath);
+            throw new RuntimeException();
+        }
     }
 }
