@@ -1,12 +1,12 @@
-package domain;
-import java.util.Scanner;
+package interfaces;
+
+import Util.GetInput;
 
 public class Menu {
 
-    static Scanner userInput = new Scanner(System.in);
     public static void mainMenu() {
         System.out.println("""
-                ====================================================
+                =====================================================================
                 Welcome! Please enter the number corresponding to the desired option:
                 1. Find a word(s)
                 2. Find words by definition
@@ -18,8 +18,8 @@ public class Menu {
                 8. History
                 9. Creator
                 10. Exit
-                ====================================================""");
-        switch (getInput()) {
+                =====================================================================""");
+        switch (GetInput.userInput()) {
             case "1":
                 //Find word
                 break;
@@ -46,20 +46,21 @@ public class Menu {
                 break;
             case "9":
                 //Creator
+                Creator.readContent();
+                GetInput.waitForEnter("Press Enter to return to the main menu.");
+                mainMenu();
                 break;
             case "10":
                 //Exit
+                System.out.println("Exiting...");
+                System.exit(0);
                 break;
             default:
-                System.out.println("Invalid input. Press Enter to return to the main menu.");
-                try{System.in.read();}
-                catch(Exception ignored){}
+                GetInput.waitForEnter("Invalid input. Press Enter to return to the main menu.");
                 Menu.mainMenu();
                 break;
         }
     }
-
-    private static String getInput() {
-        return userInput.next();
-    }
 }
+
+
