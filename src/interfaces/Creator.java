@@ -20,7 +20,8 @@ public class Creator {
                 throw new RuntimeException(e);
             }
         } else {
-            System.out.println("Failed to find Creator.txt in the lib folder.");
+            System.out.println("Failed to find " + path);
+            throw new RuntimeException();
         }
     }
 }

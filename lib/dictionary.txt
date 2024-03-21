@@ -1,0 +1,3 @@
+word | definition | part of speech | example usage
+test | take measures to check the quality, performance, or reliability of (something), especially before putting it into widespread use or practice. | verb | "this range has not been tested on animals"
+test | a procedure intended to establish the quality, performance, or reliability of something, especially before it is taken into widespread use. | noun | "no sparking was visible during the tests"

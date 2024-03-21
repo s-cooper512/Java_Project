@@ -1,6 +1,9 @@
 package interfaces;
 
 import Util.GetInput;
+import Util.PrintWords;
+import domain.WordFinder;
+import domain.WordInitializer;
 
 public class Menu {
 
@@ -22,6 +25,10 @@ public class Menu {
         switch (GetInput.userInput()) {
             case "1":
                 //Find word
+                System.out.println("What word would you like to find?");
+                PrintWords.printAllWordsInList(WordFinder.findWordByName(GetInput.userInput()));
+                GetInput.waitForEnter("Press Enter to return to the main menu...");
+                Menu.mainMenu();
                 break;
             case "2":
                 //find word by definition
