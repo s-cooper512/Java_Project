@@ -27,26 +27,35 @@ public class Menu {
                 //Find word
                 System.out.println("What word would you like to find?");
                 PrintWords.printAllWordsInList(WordFinder.findWordByName(GetInput.userInput()));
-                GetInput.waitForEnter("Press Enter to return to the main menu...");
-                Menu.mainMenu();
                 break;
             case "2":
                 //find word by definition
+                System.out.println("Find all words with definitions containing the word or phrase...");
+                PrintWords.printAllWordsInList(WordFinder.findWordByDefinition(GetInput.userInput()));
                 break;
             case "3":
                 //Find all words that start with
+                System.out.println("Find all words starting with...");
+                PrintWords.printAllWordsInList(WordFinder.findWordStartingWith(GetInput.userInput()));
                 break;
             case "4":
                 //find all words that end with
+                System.out.println("Find all words starting with...");
+                PrintWords.printAllWordsInList(WordFinder.findWordEndingWith(GetInput.userInput()));
                 break;
             case "5":
                 //find all words containing
+                System.out.println("Find all words that contain...");
+                PrintWords.printAllWordsInList(WordFinder.findWordContaining(GetInput.userInput()));
                 break;
             case "6":
                 //Add word
+                WordInitializer.addToWordList();
                 break;
             case "7":
                 //delete word
+                System.out.println("What word would you like to remove (this will remove all instances of that word)?");
+                WordInitializer.removeFromWordList(GetInput.userInput());
                 break;
             case "8":
                 //history
@@ -54,8 +63,6 @@ public class Menu {
             case "9":
                 //Creator
                 Creator.readContent();
-                GetInput.waitForEnter("Press Enter to return to the main menu.");
-                mainMenu();
                 break;
             case "10":
                 //Exit
@@ -63,10 +70,11 @@ public class Menu {
                 System.exit(0);
                 break;
             default:
-                GetInput.waitForEnter("Invalid input. Press Enter to return to the main menu.");
-                Menu.mainMenu();
+                GetInput.waitForEnter("Invalid input.");
                 break;
         }
+        GetInput.waitForEnter("\nPress Enter to return to the main menu...");
+        Menu.mainMenu();
     }
 }
 

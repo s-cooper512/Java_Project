@@ -1,5 +1,7 @@
 package domain;
 
+import Util.GetInput;
+
 public class Word {
     private String wordName, wordDefinition, wordType, wordUsage;
 
@@ -9,6 +11,17 @@ public class Word {
         setWordDefinition(definition);
         setWordType(type);
         setWordUsage(usage);
+    }
+
+    public Word() {
+        System.out.println("\nEnter the word that you would like to add: ");
+        setWordName(GetInput.userInput());
+        System.out.println("\nEnter the definition for the word: ");
+        setWordDefinition(GetInput.userInput());
+        System.out.println("\nEnter the type/part of speech for the word: ");
+        setWordType(GetInput.userInput());
+        System.out.println("\nEnter an example of the word's proper usage: ");
+        setWordUsage(GetInput.userInput());
     }
 
     //Getters

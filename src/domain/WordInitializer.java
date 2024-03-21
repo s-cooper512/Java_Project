@@ -1,5 +1,7 @@
 package domain;
 
+import Util.GetInput;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -7,6 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class WordInitializer {
@@ -32,7 +35,15 @@ public class WordInitializer {
         }
     }
 
-    public static void overwriteWordList() {
+    public static void addToWordList () {
+        activeDictionary.add(new Word());
+    }
+
+    public static void removeFromWordList (String userInput) {
+        activeDictionary.removeIf(word -> word.getWordName().equals(userInput));
+    }
+
+    public static void overwriteSavedDictionary() {
         //Add code to call the word writer for each item in activeDictionary and ensure that append is off
     }
 }
