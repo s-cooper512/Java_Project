@@ -20,8 +20,9 @@ public class Menu {
                 7. Delete a word
                 8. History
                 9. Creator
-                10. Save & Exit
-                11. Exit without saving
+                10. Save current changes
+                11. Save & Exit
+                12. Exit without saving
                 =====================================================================""");
         switch (GetInput.userInput()) {
             case "1":
@@ -69,7 +70,12 @@ public class Menu {
                 //Save & Exit
                 System.out.println("Saving updated dictionary...");
                 WordInitializer.overwriteSavedDictionary();
+                break;
             case "11":
+                //Save & Exit
+                System.out.println("Saving updated dictionary...");
+                WordInitializer.overwriteSavedDictionary();
+            case "12":
                 //Exit
                 System.out.println("Exiting...");
                 System.exit(0);
