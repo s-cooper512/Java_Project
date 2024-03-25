@@ -21,6 +21,6 @@ public class WordFinder {
     }
 
     public static List<Word> findWordContaining (String userInput) {
-        return (WordInitializer.activeDictionary.stream().filter(word -> word.getWordName().contains(userInput)).collect(Collectors.toList()));
+        return (WordInitializer.activeDictionary.stream().filter(word -> word.getWordName().toLowerCase().contains(userInput.toLowerCase())).collect(Collectors.toList()));
     }
 }
