@@ -36,7 +36,7 @@ public class WordInitializer {
     }
 
     public static void removeFromWordList (String userInput) {
-        activeDictionary.removeIf(word -> word.getWordName().equals(userInput));
+        activeDictionary.removeIf(word -> word.getWordName().equalsIgnoreCase(userInput));
     }
 
     public static void overwriteSavedDictionary() {

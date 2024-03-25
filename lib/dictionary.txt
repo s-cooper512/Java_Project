@@ -5,3 +5,4 @@ programming | The process of writing computer programs | noun | "Programming is 
 analyze | To examine something methodically and in detail | verb | "The scientist analyzed the data to draw conclusions."
 resilient | Able to withstand or recover quickly from difficult conditions | adjective | "The city's infrastructure proved to be resilient during the earthquake."
 shrek | An ogre with layers, like an onion. | noun | "GET OUT OF MAH SWAMP!"
+Donkey | The thing that should not be in my swamp. | noun | "GET OUT OF MAH SWAMP, DONKEH!"
