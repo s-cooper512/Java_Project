@@ -61,6 +61,7 @@ public class Menu {
                 break;
             case "8":
                 //history
+                GetInput.getHistory();
                 break;
             case "9":
                 //Creator
