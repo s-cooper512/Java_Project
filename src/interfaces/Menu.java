@@ -82,7 +82,7 @@ public class Menu {
                 System.exit(0);
                 break;
             default:
-                GetInput.waitForEnter("Invalid input.");
+                System.out.println("\nInvalid input.");
                 break;
         }
         GetInput.waitForEnter("\nPress Enter to return to the main menu...");
