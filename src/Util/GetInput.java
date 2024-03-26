@@ -34,9 +34,7 @@ public class GetInput {
 
     public static void getHistory() {
         System.out.println("History==============================================================");
-        history.forEach(line -> {
-            System.out.println(line);
-        });
+        history.forEach(System.out::println);
         System.out.println("=====================================================================");
     }
 }
