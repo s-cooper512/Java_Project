@@ -68,7 +68,7 @@ public class Menu {
                 Creator.readContent();
                 break;
             case "10":
-                //Save & Exit
+                //Save
                 System.out.println("Saving updated dictionary...");
                 WordInitializer.overwriteSavedDictionary();
                 break;
